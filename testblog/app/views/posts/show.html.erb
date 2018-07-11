@@ -1,0 +1,16 @@
+<h1>
+  <%= @post.title %>
+</h1>
+<p>
+ Content:
+ <%= @post.content %>
+ <hr />
+ Author:
+ <%= @post.author_id %>
+ <hr />
+ Created:
+ <%= @post.created_at %>
+ Update:
+ <%= @post.updated_at %>
+</p>
+<%= link_to 'Back to posts', posts_path %>
