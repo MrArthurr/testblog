@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get '/authors/:id', to: 'authors#show', as: :author
   get '/author/new', to: 'authors#new', as: :new_author
   resources :posts
-
+  resources :comments
   # get '/posts', to: 'posts#posts_index', as: :posts
   # get '/post/:id', to: 'posts#show', as: :post
   # get '/post/new', to: 'posts#new', as: :new_post

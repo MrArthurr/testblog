@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-  validates :title, :content,  presence: true
+  validates :title, :content, :author_id, presence: true
   validates :title, uniqueness: true
   validates :title, length: {maximum: 80}
   validates :content, length: {in: 1..1000}
