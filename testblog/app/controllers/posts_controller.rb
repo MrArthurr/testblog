@@ -13,7 +13,7 @@ class PostsController <ApplicationController
   def create
     @post = Post.new(posts_params)
     if @post.save
-      redirect_to post_path, success: 'Author was created.' #if save=true redirecting to List of all posts
+      redirect_to posts_path, success: 'Post was created.' #if save=true redirecting to List of all posts
     else
       render :new #if save=false render new view of adding new post
     end
@@ -43,6 +43,6 @@ class PostsController <ApplicationController
   private
 
   def posts_params
-    params.require(:post).permit(:title, :content)
+    params.require(:post).permit(:title, :content, :author_id)
   end
 end

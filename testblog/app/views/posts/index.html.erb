@@ -1,13 +1,12 @@
+<div class ="jumbotron">
 <h1> List of all posts </h1>
-<ul>
 
+  <div class = 'posts'>
     <% @post.each do |post| %>
-    <li>
-      <%= link_to post.title, post_path(id: post.id) %>
-      <%= link_to 'Edit', edit_post_path(id: post.id) %>
-      <%= link_to 'Delete', post_path(id: post.id), method: :delete, data: {confirm: 'Are you sure?'} %>
-      <% end %>
-    <hr />
-    <%= link_to 'New Post', new_post_path %>
+      <%= render 'post', post: post %>
+    <% end %>
+  </div>
 
-</ul>
+    <hr />
+    <%= link_to 'New Post', new_post_path, role: 'button', class: "btn btn-secondary" %>
+</div>

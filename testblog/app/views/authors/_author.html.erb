@@ -1,0 +1,7 @@
+<div class = 'conteiner'>
+  <div class="row" data-author-id="<%= author.id %>">
+  <div class="col-sm-12 col-md-8"><%= link_to author.fullname, author_path(id: author.id), role:'button', class:'list-group-item list-group-item-secondary' %></div>
+  <div class="col-sm-12 col-md-1"><%= link_to 'Edit', edit_author_path(id: author.id), role:'button',class: "btn btn-primary" %></div>
+  <div class="col-sm-12 col-md-1"><%= link_to 'Delete', author_path(id: author.id), method: :delete, remote: true, data: {confirm: 'Are you sure?'}, role: 'button',class: "btn btn-danger" %></div>
+  </div>
+</div>
